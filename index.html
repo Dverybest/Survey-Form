@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" /> 
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1" />
+        <meta name="description"
+            content="A Survey Form" />
+        <title>Survey Form</title>
+        <style>
+            body{
+                background-image:linear-gradient( 115deg, rgba(0, 0, 0, 0.8),
+                 rgba(136, 136, 206, 0.7) ),url('./bg.jpeg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                min-height: 100vh;
+                font-family: 'Segoe UI',sans-serif ;
+            }
+            #main{
+                color: #ffffff;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 80vw;
+                text-align: center;
+              
+            }
+            #title{
+                font-size:35px;
+                font-weight: 700;
+                margin-bottom: 0px;
+                line-height: 1.2em;
+            }
+            #description{
+                font-size: 17px;
+                font-style: italic;
+            }
+            #survey-form{
+                margin-top: 20px;
+                background-color: rgba(0, 0, 0, 0.5);
+                min-height: 40vh;
+                justify-content: flex-start;
+                text-align: start;
+                width: 100%;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: normal;
+                display: flex;
+                flex-direction: column;
+                padding: 20px 25px 20px 25px;
+            }
+            label{
+                margin-top: 5px;
+            }
+            .input-field{
+                border-radius: 5px;
+                padding: 8px 10px 8px 10px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 16px;
+                color: #111;
+            }
+            legend{
+                text-align: justify;
+                /* color: black; */
+            }
+            .radio-fieldset{
+                color: #fff;
+                text-align:center;
+            }
+            .radio-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+
+            }
+            .checkbox-container{
+                display: flex;
+                flex-direction: column;
+                text-align:justify ;
+            }
+            footer{
+                text-align: center;
+                min-height: 52px;
+                display: flex;
+                align-self:baseline;
+                color: #fff;
+                justify-content: center;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <main id="main">
+            <h1 id="title">Software Developers Survey Form</h1>
+            <p id="description">Thank you for taking time to help us gather chanlleges facing software developer's in Nigeria</p>
+            <form id="survey-form">
+                <label for="name" id="name-label">Name</label>
+                <input class="input-field" placeholder="Enter your name" type="text" id="name" required/>
+                <label for="email" id="email-label">Email</label>
+                <input class="input-field"
+                    placeholder="Enter your email address"
+                    type="email"
+                    id="email"
+                    required />
+                <label for="number" id="number-label">Age (optional)</label>
+                <input class="input-field"
+                    placeholder="Age" max="99" min="10"
+                    type="number"
+                    id="number"
+                />
+                <br/>
+                <label>Which option best describes your current role?</label>
+                <select class="input-field" id="dropdown" >
+                    <option value="empty">Select current role</option>
+                    <option value="front-end developer">Front-end developer</option>
+                    <option value="back-end developer">Back-end developer</option>
+                    <option value="full-stack developer">Full-stack developer</option>
+                    <option value="mobile-app developer">Mobile-app developer</option>
+                    <option value="others">Others</option>
+                </select>
+                <br/>
+                <fieldset class="input-field radio-fieldset">
+                    <legend>How many years have you being in your current role</legend>
+                    <div class="radio-container">
+                        <label for="0-1">
+                            <input type="radio"
+                                name="numberOfYears"
+                                value="0-1"
+                                checked
+                                id="0-2" />
+                            0 - 2 years
+                        </label>
+                        
+                        <label for="2-4">
+                            <input type="radio"
+                                name="numberOfYears"
+                                value="2-4"
+                                id="2-4" />
+                            2 - 4 years
+                        </label>
+                        
+                        <label for="4-6">
+                            <input type="radio"
+                                name="numberOfYears"
+                                value="4-6"
+                                id="4-6" />
+                            4 - 6 years
+                        </label>
+                        <label for="6-above">
+                            <input type="radio"
+                                name="numberOfYears"
+                                value="6 years and above"
+                                id="6-above" />
+                            6 years and above
+                        </label>
+                    </div>
+                </fieldset>
+                <br/>
+                <fieldset class="input-field radio-fieldset">
+                    <legend>Which of these best discribes problems facing software developers in Nigeria? (Check all that apply)</legend>
+                    <div class="checkbox-container">
+                        <label for="checkbox1">
+                            <input type="checkbox"
+                                name="problems"
+                                value="lack of steady power supply"
+                                id="checkbox1" />
+                            lack of steady power supply
+                        </label>
+                        <label for="checkbox2">
+                            <input type="checkbox"
+                                name="problems"
+                                value="high cost internet access"
+                                id="checkbox2" />
+                            high cost of internet access
+                        </label>
+                        <label for="checkbox3">
+                            <input type="checkbox"
+                                name="problems"
+                                value="lack of steady power supply"
+                                id="checkbox3" />
+                            no employment opportunity
+                        </label>
+                        <label for="checkbox4">
+                            <input type="checkbox"
+                                name="problems"
+                                value="high cost internet access"
+                                id="checkbox4" />
+                            under payment
+                        </label>
+                        <label for="checkbox5">
+                            <input type="checkbox"
+                                name="problems"
+                                value="lack of innovative ideas"
+                                id="checkbox5" />
+                            lack of innovative ideas
+                        </label>
+                        <label for="checkbox6">
+                            <input type="checkbox"
+                                name="problems"
+                                value="high cost of living"
+                                id="checkbox6" />
+                            high cost of living
+                        </label>
+                        <label for="checkbox7">
+                            <input type="checkbox"
+                                name="problems"
+                                value="bad government"
+                                id="checkbox7" />
+                            bad government
+                        </label>
+                    </div>
+                </fieldset>
+                <br/>
+                <label>Describe in few words what your feel should be possible solutions to problems facing
+                    software developers in Nigeria
+                </label>
+                <textarea placeholder="Describe in few words what your feel should be possible solutions"  class="input-field" rows="15"></textarea>
+                <br/>
+                <input class="input-field" type="submit" id="submit" name="submit"/>
+            </form>
+        </main>
+        <footer>
+            <p>Copyright Dverybest 2020</p>
+        </footer>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
